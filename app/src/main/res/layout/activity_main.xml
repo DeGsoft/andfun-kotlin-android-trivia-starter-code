@@ -13,7 +13,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -22,12 +21,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
                 <fragment
-                    android:id="@+id/titleFragment"
+                    android:id="@+id/myNavHostFragment"
                     android:name="androidx.navigation.fragment.NavHostFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:navGraph="@navigation/navigation"
-                    />
+                    app:defaultNavHost="true"
+                    app:navGraph="@navigation/navigation" />
         </LinearLayout>
 
 </layout>

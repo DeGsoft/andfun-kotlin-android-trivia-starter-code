@@ -16,16 +16,16 @@ class TitleFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_title, container, false)
-        //
+        //binding.playButton.setOnClickListener{ view: View ->
+        //Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
+        //or
+        //view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+        //}
+        //or
         binding.playButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
         )
-        //or
-        //binding.playButton.setOnClickListener{ view: View ->
-            //Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
-            //or
-            //view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-        //}
+
         return binding.root
     }
 }
